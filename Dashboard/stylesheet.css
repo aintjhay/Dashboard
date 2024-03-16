@@ -1,0 +1,204 @@
+/* Add the CSS styles here */
+body {
+    position: relative;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px;
+    font-family: monospace;
+    position: relative;
+}
+
+nav::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 5px;
+    background-color: white;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+
+.logo-container h1 {
+    margin-left: 20px;
+}
+
+#logo,
+#sidebar-logo {
+    margin-left: 30px;
+    width: 30px;
+    height: auto;
+    margin-right: 10px;
+    filter: drop-shadow(0 0 5px red);
+    animation: glow 1s infinite alternate;
+}
+
+#reddot-icon {
+    width: 50px;
+    height: auto;
+    margin-right: 0px;
+}
+
+@keyframes glow {
+    from {
+        filter: drop-shadow(0 0 5px red);
+    }
+    to {
+        filter: drop-shadow(0 0 15px red);
+    }
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    margin-right: 50px;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li:first-child {
+    margin-left: 0;
+}
+
+nav ul li a {
+    display: inline-block;
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+nav ul li a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.sidebar {
+    position: fixed;
+    top: 85px;
+    left: 0;
+    width: 280px;
+    height: calc(100% - 60px);
+    background-color: white;
+    z-index: 1;
+    padding-top: 15px;
+    font-family: monospace;
+    color: rgb(245, 245, 245);
+    font-size: 10px;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.sidebar ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.sidebar ul li {
+    padding: 10px 30px;
+    margin: 20px;
+}
+
+.sidebar ul li a {
+    color: rgb(247, 247, 247);
+    text-decoration: none;
+    font-size: 18px;
+    font-family: monospace;
+}
+
+#background-img {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    filter: blur(5px);
+    z-index: 0;
+}
+
+#sidebar-logo {
+    display: flex;
+    align-items: center;
+}
+
+#sidebar-logo h1 {
+    margin-left: 10px;
+}
+
+.dashboard {
+    margin-top: 80px;
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.product-card {
+    width: 250px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+}
+
+.product-card img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.product-card h3 {
+    margin-top: 10px;
+    font-size: 20px;
+}
+
+.product-card p {
+    margin-top: 10px;
+}
+
+.product-card span {
+    font-weight: bold;
+    font-size: 18px;
+    color: #333;
+}
+
+.dashboard {
+    margin-top: 80px;
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    z-index: 2; /* Ensure the dashboard is above other elements */
+    position: relative; /* Ensure proper positioning */
+}
+
+.product-card {
+    width: 250px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    z-index: 2; /* Ensure the product cards are above other elements */
+    position: relative; /* Ensure proper positioning */
+}
+
