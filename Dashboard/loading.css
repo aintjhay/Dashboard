@@ -1,0 +1,58 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    overflow: hidden;
+    background-color: black; /* Black background */
+}
+
+.loader {
+    position: fixed;
+    top: calc(50% - 25px); /* Adjusted to vertically center loader */
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: 5px solid #f00; /* Red border */
+    border-top: 5px solid transparent; /* Transparent top border */
+    border-radius: 50%; /* Circle shape */
+    width: 50px;
+    height: 50px;
+    animation: spin 1s linear infinite; /* Spin animation */
+}
+
+.text {
+    position: fixed;
+    top: calc(50% + 35px); /* Adjusted to position below loader */
+    left: 50%;
+    transform: translateX(-50%);
+    font-family: monospace; /* Monospace font */
+    font-size: 36px;
+    color: white; /* White color */
+    animation: blink 1s infinite alternate; /* Blink animation */
+}
+
+@keyframes spin {
+    0% {
+        transform: translate(-50%, -50%) rotate(0deg);
+    }
+    100% {
+        transform: translate(-50%, -50%) rotate(360deg);
+    }
+}
+
+@keyframes blink {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0.5; /* Adjusted opacity for blinking effect */
+    }
+}
+
+body {
+    opacity: 1;
+    transition: opacity 1.5s ease-in-out;
+}
+
+.fadeOut {
+    opacity: 0;
+}
